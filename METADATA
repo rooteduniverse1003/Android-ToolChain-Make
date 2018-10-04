@@ -1,0 +1,18 @@
+name: "GNU Make"
+description:
+    "GNU Make is a tool which controls the generation of executables and other "
+    "non-source files of a program from the program's source files."
+
+third_party {
+  url {
+    type: HOMEPAGE
+    value: "https://www.gnu.org/software/make/"
+  }
+  url {
+    type: GIT
+    value: "https://git.savannah.gnu.org/git/make.git"
+  }
+  version: "4.2.1"
+  last_upgrade_date { year: 2018 month: 10 day: 2 }
+  license_type: RESTRICTED
+}
