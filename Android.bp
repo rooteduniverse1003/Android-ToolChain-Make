@@ -1,0 +1,84 @@
+// Copyright 2018 The Android Open Source Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+cc_binary_host {
+    name: "make",
+
+    cflags: [
+        "-DHAVE_CONFIG_H",
+        "-DINCLUDEDIR=0",
+        "-DLIBDIR=0",
+        "-DLOCALEDIR=NULL",
+
+        "-Wno-unused-parameter",
+        "-Wno-dangling-else",
+        "-Wno-format",
+        "-Wno-incompatible-pointer-types",
+    ],
+
+    local_include_dirs: ["glob"],
+
+    srcs: [
+        // make_SRCS
+        "ar.c",
+        "arscan.c",
+        "commands.c",
+        "default.c",
+        "dir.c",
+        "expand.c",
+        "file.c",
+        "function.c",
+        "getopt.c",
+        "getopt1.c",
+        "guile.c",
+        "implicit.c",
+        "job.c",
+        "load.c",
+        "loadapi.c",
+        "main.c",
+        "misc.c",
+        "output.c",
+        "read.c",
+        "remake.c",
+        "rule.c",
+        "signame.c",
+        "strcache.c",
+        "variable.c",
+        "version.c",
+        "vpath.c",
+        "hash.c",
+
+        // USE_CUSTOMS
+        "remote-stub.c",
+
+        "glob/glob.c",
+        "glob/fnmatch.c",
+
+        "getloadavg.c",
+    ],
+
+    target: {
+        linux_glibc: {
+            local_include_dirs: ["soong/linux_glibc"],
+        },
+        darwin: {
+            local_include_dirs: ["soong/darwin"],
+        },
+        not_windows: {
+            srcs: [
+                "posixos.c",
+            ],
+        },
+    },
+}
