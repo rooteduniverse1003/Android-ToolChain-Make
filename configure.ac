@@ -40,6 +40,7 @@ AC_PROG_CPP
 AC_CHECK_PROG([AR], [ar], [ar], [ar])
 # Perl is needed for the test suite (only)
 AC_CHECK_PROG([PERL], [perl], [perl], [perl])
+AM_MAINTAINER_MODE
 
 # Needed for w32/Makefile.am
 AM_PROG_AR
