@@ -8,14 +8,14 @@ TAGS
 .#*
 
 # Configure artifacts
-ABOUT-NLS
+#ABOUT-NLS
 Makefile
 Makefile.in
-aclocal.m4
+#aclocal.m4
 autom4te.cache
 config.cache
-#config.h
-config.h.in
+config.h
+#config.h.in
 config.log
 config.status
 configure

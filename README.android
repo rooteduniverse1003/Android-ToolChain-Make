@@ -1,0 +1,7 @@
+Upgrade process:
+
+1) Merge new code from upstream.
+
+2) Make sure AM_MAINTAINER_MODE is in configure.ac
+
+3) Follow instructions in README.git to regenerate configure files.
