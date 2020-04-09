@@ -20,7 +20,7 @@ Makefile.in
 Basic.mk
 #aclocal.m4
 autom4te.cache/
-build-aux/
+#build-aux/
 config.cache
 config.h
 #config.h.in
@@ -30,7 +30,7 @@ configure
 /mk/Posix.mk
 stamp-h1
 .dirstamp
-gnulib
+#gnulib
 
 # Build artifacts
 .deps/
