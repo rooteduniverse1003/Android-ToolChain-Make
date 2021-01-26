@@ -80,6 +80,17 @@ cc_binary_host {
         },
         darwin: {
             local_include_dirs: ["soong/darwin"],
+
+            // This isn't being distributed to end-users, so bump up our machine
+            // requirements.
+            cflags: [
+                "-mmacosx-version-min=10.13",
+                "-UMACOSX_DEPLOYMENT_TARGET",
+                "-DMACOSX_DEPLOYMENT_TARGET=10.13",
+            ],
+            ldflags: [
+                "-mmacosx-version-min=10.13",
+            ],
         },
         not_windows: {
             srcs: [
