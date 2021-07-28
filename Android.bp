@@ -72,8 +72,14 @@ cc_binary_host {
     ],
 
     target: {
-        linux_glibc: {
+        glibc: {
             local_include_dirs: ["soong/linux_glibc"],
+            srcs: [
+                "lib/getloadavg.c",
+            ],
+        },
+        musl: {
+            local_include_dirs: ["soong/linux_musl"],
             srcs: [
                 "lib/getloadavg.c",
             ],
