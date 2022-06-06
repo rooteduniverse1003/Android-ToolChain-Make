@@ -21,10 +21,11 @@ cc_binary_host {
         "-DLIBDIR=0",
         "-DLOCALEDIR=NULL",
 
-        "-Wno-unused-parameter",
         "-Wno-dangling-else",
         "-Wno-format",
         "-Wno-incompatible-pointer-types",
+        "-Wno-string-compare",
+        "-Wno-unused-parameter",
     ],
 
     local_include_dirs: ["lib", "src"],
