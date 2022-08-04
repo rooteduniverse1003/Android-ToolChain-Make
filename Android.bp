@@ -22,6 +22,7 @@ cc_binary_host {
         "-DLOCALEDIR=NULL",
 
         "-Wno-dangling-else",
+        "-Wno-deprecated-non-prototype",
         "-Wno-format",
         "-Wno-incompatible-pointer-types",
         "-Wno-string-compare",
