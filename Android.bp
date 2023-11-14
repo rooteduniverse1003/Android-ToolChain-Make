@@ -28,6 +28,7 @@ cc_binary_host {
         "-Wno-string-compare",
         "-Wno-unused-parameter",
     ],
+    stl: "none",
 
     local_include_dirs: ["lib", "src"],
 
